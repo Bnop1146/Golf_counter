@@ -3,7 +3,7 @@
 }
 
 body {
-	margin: 0;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,31 +33,28 @@ img {
 }
 
 
-span {cursor:pointer; }
-.number{
-	margin:100px;
+.container{
+	margin: 50px auto 10px;
+	padding-left: 2rem;
 }
-.minus, .plus{
-	width:20px;
-	height:20px;
+
+
+.minus{
+	width:10%;
+	height:40px;
 	background:#03a9f4;
 	border-radius:4px;
-	padding:8px 5px 8px 5px;
-	border:1px solid #ddd;
-	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
+
 }
 
 
 .plus{
-	width:20px;
-	height:20px;
+	width:10%;
+	height:40px;
 	background:#8bc34a;
 	border-radius:4px;
-	padding:8px 5px 8px 5px;
-	border:1px solid #ddd;
-	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
 }
@@ -65,13 +62,19 @@ span {cursor:pointer; }
 
 
 
-input {
-	height: 34px;
-	width: 100px;
+
+.input {
+	height: 40px;
+	width: 70%;
 	text-align: center;
-	font-size: 26px;
+	font-size: 24px;
 	border: 1px solid #ddd;
 	border-radius: 4px;
 	display: inline-block;
 	vertical-align: middle;
 }
+
+
+
+
+
