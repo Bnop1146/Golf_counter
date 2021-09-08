@@ -1,13 +1,114 @@
 
 export default class ScoreBoard {}
 
-    window.onload=function(){
-        let minusBtn = document.getElementById("minus"),
-            plusBtn = document.getElementById("plus"),
-            numberPlace = document.getElementById("numberPlace"),
-            number = 0, /// number value
-            min = 1, /// min number
-            max = 30; /// max number
+// let container = document.querySelectorAll(".container");
+let minusBtn = document.querySelectorAll(".minusBtn");
+let plusBtn = document.querySelectorAll(".plusBtn");
+
+minusBtn.forEach((minusBtn) => {
+    minusBtn.addEventListener("click",function(e){
+        if(e.target.nextElementSibling.value > 0){
+            e.target.nextElementSibling.value--;
+        } else {
+            // delete the item, etc
+        }
+    })
+})
+plusBtn.forEach((minusBtn) => {
+    minusBtn.addEventListener("click",function(e){
+        e.target.previousElementSibling.value++;
+    })
+})
+
+
+
+window.sumInputs = function() {
+    let inputs = document.getElementsByName("counter"),
+        result = document.getElementById('total'),
+        sum = 0;
+
+    for (let i = 0; i < inputs.length; i++) {
+        const ip = inputs[i];
+
+        if (ip.name && ip.name.indexOf("total") < 0) {
+            sum += parseInt(ip.value) || 0;
+        }
+
+    }
+
+    result.value = sum;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+function Sum()
+{
+    let total = 0;
+    for(let i = 1; i <= row_no; ++i)
+    {
+        const x = document.getElementById("desc" + i).value;
+        const y = document.getElementById("itemno" + i).value;
+        const subtotal = x * y;
+        total += subtotal;
+        document.getElementById("ourcost" + i).value = subtotal;
+    }
+    document.getElementById("total").value = total;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*window.onload=function(){
+        this.minusBtn = document.querySelector(".minus")
+            this.plusBtn = document.querySelector(".plus")
+            this.numberPlace = document.querySelector(".numberPlace")
+            this.number = 0 /// number value
+            this.min = 1 /// min number
+            this.max = 15; /// max number
 
         minusBtn.onclick = function(){
             if (number>min){
@@ -18,24 +119,14 @@ export default class ScoreBoard {}
             if(number === min) {
                 setTimeout(function(){numberPlace.style.color= "black"},500)
             }
-            else {
-                numberPlace.style.color="black";
-            }
+
+
 
         }
         plusBtn.onclick = function(){
             if(number<max){
                 number = number+1;
                 numberPlace.innerText = number ; /// Display the value in place of the number
-            }
-            if(number === max){
-                numberPlace.style.color= "red";
-                setTimeout(function(){numberPlace.style.color= "black"},500)
-            }
-
-            else {
-                numberPlace.style.color= "black";
-
             }
 
 
@@ -46,4 +137,4 @@ export default class ScoreBoard {}
 
 
 
-
+*/
