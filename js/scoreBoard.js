@@ -1,5 +1,12 @@
 
-export default class ScoreBoard {}
+export default class ScoreBoard  {
+
+
+    constructor() {
+
+
+
+
 
 // let container = document.querySelectorAll(".container");
 let minusBtn = document.querySelectorAll(".minusBtn");
@@ -42,8 +49,8 @@ window.sumInputs = function() {
 
 
 
-
-
+}
+}
 
 
 
