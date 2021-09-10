@@ -1,5 +1,5 @@
 export default class newHole {
-    constructor(name) {
+    constructor() {
         this.enterButton = document.querySelector('#add-new button');
         this.input = document.querySelector('#inputArea input');
         this.ul = document.querySelector('ul#toDoList');
