@@ -1,16 +1,18 @@
+import NewHole from "./newHole.js";
+
 
 export default class ScoreBoard  {
 
 
     constructor() {
-
+        const minusBtn = document.querySelectorAll(".minusBtn");
+        const plusBtn = document.querySelectorAll(".plusBtn");
 
 
 
 
 // let container = document.querySelectorAll(".container");
-let minusBtn = document.querySelectorAll(".minusBtn");
-let plusBtn = document.querySelectorAll(".plusBtn");
+
 
 minusBtn.forEach((minusBtn) => {
     minusBtn.addEventListener("click",function(e){
@@ -19,16 +21,40 @@ minusBtn.forEach((minusBtn) => {
         } else {
             // delete the item, etc
         }
+        getTotal();
+
     })
 })
 plusBtn.forEach((minusBtn) => {
     minusBtn.addEventListener("click",function(e){
         e.target.previousElementSibling.value++;
+        getTotal();
     })
+    getTotal();
+
 })
 
 
 
+    function getTotal (){
+        const arr = document.querySelectorAll('.numberPlace')
+        let total = 0;
+        for (let i =0; i < arr.length; i++) {
+            if (parseInt(arr[i].value)) {
+                total += parseInt(arr[i].value);
+            }
+        }
+
+        document.getElementById('total').value = total;
+
+    }
+
+
+
+
+
+
+/*
 window.sumInputs = function() {
     let inputs = document.getElementsByName("counter"),
         result = document.getElementById('total'),
@@ -45,7 +71,7 @@ window.sumInputs = function() {
 
     result.value = sum;
 }
-
+*/
 
 
 
