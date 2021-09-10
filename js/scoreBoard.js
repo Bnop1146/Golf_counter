@@ -1,6 +1,5 @@
 import NewHole from "./newHole.js";
 
-
 export default class ScoreBoard  {
 
 
@@ -18,19 +17,17 @@ minusBtn.forEach((minusBtn) => {
     minusBtn.addEventListener("click",function(e){
         if(e.target.nextElementSibling.value > 0){
             e.target.nextElementSibling.value--;
-        } else {
-            // delete the item, etc
         }
         getTotal();
 
     })
 })
-plusBtn.forEach((minusBtn) => {
-    minusBtn.addEventListener("click",function(e){
-        e.target.previousElementSibling.value++;
-        getTotal();
-    })
-    getTotal();
+        plusBtn.forEach((minusBtn) => {
+            minusBtn.addEventListener("click",function(e){
+                e.target.previousElementSibling.value++;
+                getTotal();
+            })
+            getTotal();
 
 })
 
@@ -52,6 +49,9 @@ plusBtn.forEach((minusBtn) => {
 
 
 
+}
+}
+
 
 
 /*
@@ -72,14 +72,6 @@ window.sumInputs = function() {
     result.value = sum;
 }
 */
-
-
-
-}
-}
-
-
-
 
 
 /*

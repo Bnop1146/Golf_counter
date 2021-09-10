@@ -47,21 +47,21 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding-bottom: 1em;
 	border-bottom: 2px solid var(--clr-gray-light);
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 
 .btn-add {
-	width: 4rem;
-	height: 2em;
+	width: 6em;
+	height: 1.5rem;
 	border: none;
 	color: white;
 	cursor: pointer;
 	font-family: "Open Sans", sans-serif;
 	border-radius: 0.2em;
 	outline: none;
-	transition: all 100ms ease-in;
 }
 
 
@@ -111,11 +111,9 @@ header {
 
 
 .total-button{
-	display: flex;
-	justify-content: space-evenly;
 	border-radius: 4px;
 	text-align: center;
-	border: none;
+	border: solid lightgray;
 }
 
 
